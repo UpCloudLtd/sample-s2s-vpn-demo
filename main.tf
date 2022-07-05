@@ -28,6 +28,7 @@ resource "upcloud_server" "s2s_vpn_vm" {
   network_interface {
     type    = "private"
     network = upcloud_network.backend_network.id
+    source_ip_filtering = false
   }
 
   login {
