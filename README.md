@@ -68,6 +68,13 @@ upcloud-to-remote-tunnel[2]: ESTABLISHED 2 minutes ago, 5.22.218.1[5.22.218.1]..
 upcloud-to-remote-tunnel{2}:  INSTALLED, TUNNEL, reqid 2, ESP SPIs: ce7f4596_i c812cd30_o
 upcloud-to-remote-tunnel{2}:   10.200.0.0/24 === 10.255.0.0/24
 ```
+
+If you want to route all outgoing traffic via VPN Cloud server and use it as NAT gateway you can add following iptables 
+rule to the VPN Cloud server.
+
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
 ### Destroying stuff
 
 After testing things around its good to free the resources. Tearing the thing down is also just one command.
