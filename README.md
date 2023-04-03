@@ -45,7 +45,7 @@ Terraform scripts can SSH into Cloud Servers using agent forwarding**
 
 ### Creating services with basic configuration
 
-Initate the project and install providers.
+Initiate the project and install providers.
 
 ```
 make init
